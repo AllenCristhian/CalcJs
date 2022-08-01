@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {  
+  background: #000;
+  font-family: fantasy;
+}
+
+.hPage {
+  height: 40px;
+  font-size: 14px;
+  color: gold;
+  font-family: monospace;
+  box-shadow: 1px 1px 10px 1px gold;
+}
+
+.hPage h1 {
+  padding-left: 5%;
+  padding-top: 5px;
+}
+
+.calculator {
+  border: solid 1px #00ccff;
+  width: 210px;
+  min-height: 250pxdddddd;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10rem;
+}
+
+.calculator header {
+  border-bottom: solid 1px #000;
+  display: flex;
+  width: 100%;
+  background: linear-gradient(to bottom, #00ccff 10%, #ff3333 95%);
+  height: 25px;
+  align-items: center;
+}
+
+.calculator header p {
+  margin: 3px;
+  margin-left: 10px;
+}
+
+.calculator header i {
+  margin-left: auto;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.visor {
+  margin: 10px;
+  padding: 3px;
+  border: solid 0.8px #000 ;
+  background: linear-gradient(to bottom, #00ccff 10%, #ff3333 95%);
+}
+
+.visor input {
+  width: 95%;
+}
+
+.visor button {
+  height: 20px;
+}
+
+.visor .igual {
+  width: 65%;
+}
+
+.visor .clear {
+  width: 32%;
+}
+
+button {
+  color: #fff;
+  background: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttons {
+  margin: 10px;
+  border: solid 0.8px #000 ;
+  background: linear-gradient(to bottom, #00ccff 5%, #ff3333 95%);
+}
+
+.buttons button {
+  width: 50px;
+  height: 25px;
+  margin: 5px;  
+}
+
+/* Css para mobile*/ 
+@media (max-width: 750px) {
+  .calculator {
+    width: 100%;
+    margin: 20px;
+    width: -webkit-fill-available;
+  }  
+}

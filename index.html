@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Calculator</title>
+
+  <link rel="stylesheet" href="./css/calc.css">
+
+  <!--Ícone do Sistema-->
+  <link rel="shortcut icon" href="./img/calculatorNeonlg.svg" type="image/x-icon">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"> 
+
+</head>
+<body>
+
+  <header class="hPage">
+    <h1 class="dtHs" id="dtHs">Data - Hora</h1>
+  </header>
+  
+  <section>
+
+    <div class="calculator">
+      <header>
+        <p>CALCULATOR</p>
+        <i class="fas fa-calculator"></i>
+      </header>
+      <div class="visor">
+        <input type="text" name="Visor" id="visor">
+        <button class="igual" id="calc">=</button>
+        <button class="clear" id="clearScreen">Clear</button>
+      </div>
+      <div class="buttons" name="buttons" id="buttons">
+        <button value="1" id="num1">1</button>
+        <button value="2" id="num2">2</button>
+        <button value="3" id="num3">3</button>
+        <button value="4" id="num4">4</button>
+        <button value="5" id="num5">5</button>
+        <button value="6" id="num6">6</button>
+        <button value="7" id="num7">7</button>
+        <button value="8" id="num8">8</button>
+        <button value="9" id="num9">9</button>
+        <button value="0" id="num0">0</button>
+        <button value="+" id="btnSoma">+</button>
+        <button value="-" id="btnSub">-</button>
+        <button value="*" id="btnMult">*</button>
+        <button value="÷" id="btnDiv">÷</button>
+        <button value="^" id="btnExpo">^</button>
+        <button value="." id="btnPoint">.</button>
+        <button value="," id="btnVirg">,</button>
+        <button value="%" id="btnPerc">%</button>        
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/calc.js"></script>
+</body>
+</html>
