@@ -43,7 +43,7 @@ btnCalc.addEventListener('click', function () {
 })
 
 btnClear.addEventListener('click', function () {
-  console.log('Botão para Limpeza de Tela')
+  clearScreen()
 })
 
 
@@ -139,16 +139,22 @@ btnAcaoPerc.addEventListener('click', function () {
 })
 
 function incrementVlr (vl) {
-  const returnScreen = document.getElementById('visor');
+  let returnScreen = document.getElementById('visor');
 
   let vlr = document.getElementById(vl);
 
   console.log(vlr, typeof vlr)
 
-  returnScreen = returnScreen + vlr;
+  console.log(returnScreen)
+
+  returnScreen.setAttribute('value' , 'Estou no visor!!');
 
 }
 
-function clearScreen () {}
+function clearScreen () {
+  let returnScreen = document.getElementById('visor');
+
+  returnScreen.removeAttribute('value');
+}
 
 function calculator () {}
