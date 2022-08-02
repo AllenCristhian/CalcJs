@@ -48,9 +48,9 @@ btnClear.addEventListener('click', function () {
 
 
 
-btnNum1.addEventListener('click', function () {
+btnNum1.addEventListener('click', function (e) {
   console.log(btnNum1.value)
-  incrementVlr(this.value)
+  incrementVlr(e.target.value)
 })
 
 btnNum2.addEventListener('click', function () {
@@ -140,11 +140,11 @@ btnAcaoPerc.addEventListener('click', function () {
 function incrementVlr (vl) {
   let returnScreen = document.getElementById('visor');
 
-  let vlr = document.getElementById(vl);
+  // let vlr = document.getElementById(`num${vl}`);
 
-  console.log(vlr)
+  // console.log(typeof vlr.value)
 
-  returnScreen.setAttribute('value' , vlr + vlr);
+  returnScreen.setAttribute('value' , vl);
 
 }
 
