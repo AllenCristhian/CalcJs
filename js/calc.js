@@ -32,14 +32,14 @@ let btnAcaoSub = document.getElementById('btnSub');
 let btnAcaoMult = document.getElementById('btnMult');
 let btnAcaoDiv = document.getElementById('btnDiv');
 let btnAcaoExpo = document.getElementById('btnExpo');
-let btnAcaoPoint = document.getElementById('btnPoint');
+let btnAcaoDelet = document.getElementById('btnDelet');
 let btnAcaoVirg = document.getElementById('btnVirg');
 let btnAcaoPerc = document.getElementById('btnPerc');
 
 
 
 btnCalc.addEventListener('click', function () {
-  console.log('Botão de Igual para fazer o calculo da equação')
+  calculator()
 })
 
 btnClear.addEventListener('click', function () {
@@ -123,9 +123,8 @@ btnAcaoExpo.addEventListener('click', function () {
   incrementVlr(this.value)
 })
 
-btnAcaoPoint.addEventListener('click', function () {
-  console.log(btnAcaoPoint.value)
-  incrementVlr(this.value)
+btnAcaoDelet.addEventListener('click', function () {
+  deletVlr()
 })
 
 btnAcaoVirg.addEventListener('click', function () {
@@ -145,7 +144,7 @@ function incrementVlr (vl) {
 
   console.log(vlr)
 
-  returnScreen.setAttribute('value' , 'Estou no visor!!');
+  returnScreen.setAttribute('value' , vlr + vlr);
 
 }
 
@@ -156,3 +155,7 @@ function clearScreen () {
 }
 
 function calculator () {}
+
+function deletVlr () {
+  console.log('Estou aqui!')
+}
