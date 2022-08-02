@@ -50,92 +50,92 @@ btnClear.addEventListener('click', function () {
 
 btnNum1.addEventListener('click', function () {
   console.log(btnNum1.value)
-  incrementVlr(1)
+  incrementVlr(this.value)
 })
 
 btnNum2.addEventListener('click', function () {
   console.log(btnNum2.value)
-  incrementVlr(2)
+  incrementVlr(this.value)
 })
 
 btnNum3.addEventListener('click', function () {
   console.log(btnNum3.value)
-  incrementVlr(3)
+  incrementVlr(this.value)
 })
 
 btnNum4.addEventListener('click', function () {
   console.log(btnNum4.value)
-  incrementVlr(4)
+  incrementVlr(this.value)
 })
 
 btnNum5.addEventListener('click', function () {
   console.log(btnNum5.value)
-  incrementVlr(5)
+  incrementVlr(this.value)
 })
 
 btnNum6.addEventListener('click', function () {
   console.log(btnNum6.value)
-  incrementVlr(6)
+  incrementVlr(this.value)
 })
 
 btnNum7.addEventListener('click', function () {
   console.log(btnNum7.value)
-  incrementVlr(7)
+  incrementVlr(this.value)
 })
 
 btnNum8.addEventListener('click', function () {
   console.log(btnNum8.value)
-  incrementVlr(8)
+  incrementVlr(this.value)
 })
 
 btnNum9.addEventListener('click', function () {
   console.log(btnNum9.value)
-  incrementVlr(9)
+  incrementVlr(this.value)
 })
 
 btnNum0.addEventListener('click', function () {
   console.log(btnNum0.value)
-  incrementVlr(0)
+  incrementVlr(this.value)
 })
 
 btnAcaoSoma.addEventListener('click', function () {
   console.log(btnAcaoSoma.value)
-  incrementVlr('+')
+  incrementVlr(this.value)
 })
 
 btnAcaoSub.addEventListener('click', function () {
   console.log(btnAcaoSub.value)
-  incrementVlr('-')
+  incrementVlr(this.value)
 })
 
 btnAcaoMult.addEventListener('click', function () {
   console.log(btnAcaoMult.value)
-  incrementVlr('*')
+  incrementVlr(this.value)
 })
 
 btnAcaoDiv.addEventListener('click', function () {
   console.log(btnAcaoDiv.value)
-  incrementVlr('÷')
+  incrementVlr(this.value)
 })
 
 btnAcaoExpo.addEventListener('click', function () {
   console.log(btnAcaoExpo.value)
-  incrementVlr('^')
+  incrementVlr(this.value)
 })
 
 btnAcaoPoint.addEventListener('click', function () {
   console.log(btnAcaoPoint.value)
-  incrementVlr('.')
+  incrementVlr(this.value)
 })
 
 btnAcaoVirg.addEventListener('click', function () {
   console.log(btnAcaoVirg.value)
-  incrementVlr(',')
+  incrementVlr(this.value)
 })
 
 btnAcaoPerc.addEventListener('click', function () {
   console.log(btnAcaoPerc.value)
-  incrementVlr('%')
+  incrementVlr(this.value)
 })
 
 function incrementVlr (vl) {
@@ -143,9 +143,7 @@ function incrementVlr (vl) {
 
   let vlr = document.getElementById(vl);
 
-  console.log(vlr, typeof vlr)
-
-  console.log(returnScreen)
+  console.log(vlr)
 
   returnScreen.setAttribute('value' , 'Estou no visor!!');
 
