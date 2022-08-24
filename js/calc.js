@@ -32,11 +32,12 @@ let btnAcaoSub = document.getElementById('btnSub');
 let btnAcaoMult = document.getElementById('btnMult');
 let btnAcaoDiv = document.getElementById('btnDiv');
 let btnAcaoExpo = document.getElementById('btnExpo');
-let btnAcaoDelet = document.getElementById('btnDelet');
-let btnAcaoVirg = document.getElementById('btnVirg');
-let btnAcaoPerc = document.getElementById('btnPerc');
 
+const visor = document.getElementById('visor')
 
+let numI;
+let ope;
+let numF
 
 btnCalc.addEventListener('click', function () {
   calculator()
@@ -49,113 +50,118 @@ btnClear.addEventListener('click', function () {
 
 
 btnNum1.addEventListener('click', function (e) {
-  console.log(btnNum1.value)
-  incrementVlr(e.target.value)
+  incrementVlr(this.value)
 })
 
 btnNum2.addEventListener('click', function () {
-  console.log(btnNum2.value)
   incrementVlr(this.value)
 })
 
 btnNum3.addEventListener('click', function () {
-  console.log(btnNum3.value)
   incrementVlr(this.value)
 })
 
 btnNum4.addEventListener('click', function () {
-  console.log(btnNum4.value)
   incrementVlr(this.value)
 })
 
 btnNum5.addEventListener('click', function () {
-  console.log(btnNum5.value)
   incrementVlr(this.value)
 })
 
 btnNum6.addEventListener('click', function () {
-  console.log(btnNum6.value)
   incrementVlr(this.value)
 })
 
 btnNum7.addEventListener('click', function () {
-  console.log(btnNum7.value)
   incrementVlr(this.value)
 })
 
 btnNum8.addEventListener('click', function () {
-  console.log(btnNum8.value)
   incrementVlr(this.value)
 })
 
 btnNum9.addEventListener('click', function () {
-  console.log(btnNum9.value)
   incrementVlr(this.value)
 })
 
 btnNum0.addEventListener('click', function () {
-  console.log(btnNum0.value)
   incrementVlr(this.value)
 })
 
 btnAcaoSoma.addEventListener('click', function () {
-  console.log(btnAcaoSoma.value)
-  incrementVlr(this.value)
+  operator(this.value)
 })
 
 btnAcaoSub.addEventListener('click', function () {
-  console.log(btnAcaoSub.value)
-  incrementVlr(this.value)
+  operator(this.value)
 })
 
 btnAcaoMult.addEventListener('click', function () {
-  console.log(btnAcaoMult.value)
-  incrementVlr(this.value)
+  operator(this.value)
 })
 
 btnAcaoDiv.addEventListener('click', function () {
-  console.log(btnAcaoDiv.value)
-  incrementVlr(this.value)
+  operator(this.value)
 })
 
 btnAcaoExpo.addEventListener('click', function () {
-  console.log(btnAcaoExpo.value)
-  incrementVlr(this.value)
-})
-
-btnAcaoDelet.addEventListener('click', function () {
-  deletVlr()
-})
-
-btnAcaoVirg.addEventListener('click', function () {
-  console.log(btnAcaoVirg.value)
-  incrementVlr(this.value)
-})
-
-btnAcaoPerc.addEventListener('click', function () {
-  console.log(btnAcaoPerc.value)
-  incrementVlr(this.value)
+  operator(this.value)
 })
 
 function incrementVlr (vl) {
-  let returnScreen = document.getElementById('visor');
-
-  // let vlr = document.getElementById(`num${vl}`);
-
-  // console.log(typeof vlr.value)
-
-  returnScreen.setAttribute('value' , vl);
-
+  visor.value += vl
 }
 
 function clearScreen () {
-  let returnScreen = document.getElementById('visor');
-
-  returnScreen.removeAttribute('value');
+  visor.value = ''
 }
 
-function calculator () {}
+function calculator () {
 
-function deletVlr () {
-  console.log('Estou aqui!')
+  numF = visor.value;
+
+  if (ope == '+') {
+    let res = Number(numI) + Number(numF)
+
+    visor.value = res
+
+  } else
+  if (ope == '-') {
+    let res = Number(numI) - Number(numF)
+
+    visor.value = res
+
+  } else 
+  if (ope == '*') {
+    let res = Number(numI) * Number(numF)
+
+    visor.value = res
+
+  } else 
+  if (ope == '÷') {
+    let res = Number(numI) / Number(numF)
+
+    visor.value = res
+
+  } else 
+  if (ope == '^') {
+    let res;
+
+    for (let i = 0; i < numF; i++) {
+      res = (Number(numI) * Number(numI)) * i;
+    }
+
+    visor.value = res
+
+  }
+
+}
+
+function operator (op) {
+  ope = op
+  numI = visor.value
+
+  clearScreen ()
+
 }
